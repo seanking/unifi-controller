@@ -17,6 +17,8 @@ RUN wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-
 RUN apt-get update
 RUN apt-get -y install unifi
 
+VOLUME [ "/usr/lib/unifi/data", "/usr/lib/unifi/logs" ]
+
 EXPOSE 6789/tcp 8080/tcp 8443/tcp 8880/tcp 8843/tcp 3478/udp
 
 ENTRYPOINT ["/usr/bin/java", "-Xmx2048m", "-jar", "/usr/lib/unifi/lib/ace.jar"]
