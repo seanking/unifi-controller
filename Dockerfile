@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 LABEL maintainer="Sean King <r.sean.king@gmail.com>"
 
 # Install Dependencies
